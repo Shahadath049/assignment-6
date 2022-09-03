@@ -5,10 +5,10 @@ body{
 hr{
     border: 1px solid;
 }
-#category-container{
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
+#category-containerr{
+
     color:#858585;
+    margin: 10px;
 }
 .news-type{
     text-align: center;
