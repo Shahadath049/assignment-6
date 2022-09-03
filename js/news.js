@@ -2,7 +2,9 @@ const loadCategory = () =>{
     fetch('https://openapi.programming-hero.com/api/news/categories')
     .then(res => res.json())
     .then(data => displayCategory(data.data.news_category))
-   
+    .catch(error => {
+      console.log(error);
+  })
 }
 
 const displayCategory = categories =>{
@@ -25,12 +27,34 @@ const loadNews = (category_id) =>{
     fetch(`https://openapi.programming-hero.com/api/news/category/${category_id}`)
     .then(res =>res.json())
     .then(data => displayNews(data.data))
+    .catch(error => {
+      console.log(error);
+  })
 }
 
 const displayNews = allnews =>{ 
   
     const newsContainer = document.getElementById('news-container');
     newsContainer.textContent= '';
+
+    // not found message 
+    const message = document.getElementById('not-found');
+    
+    if(allnews.length === 0){
+        message.classList.remove('d-none')
+    }
+    else{
+      message.classList.add('d-none')
+    }
+
+    const newMessage= document.getElementById('found');
+    newMessage.innerText = allnews.length + ' '+ 'Items found in this category';
+    if(allnews.length >0){
+      newMessage.classList.remove('d-none');
+    }
+    else{
+      newMessage.classList.add('d-none')
+    }
    
     allnews.forEach(news =>{
       
@@ -76,6 +100,9 @@ const newsDetails = news_id =>{
     fetch(`https://openapi.programming-hero.com/api/news/${news_id}`)
     .then(res => res.json())
     .then(data => displayNewsDetails(data.data[0]))
+    .catch(error => {
+      throw(error);
+  })
 }
 // document.getElementById('news-container').addEventListener('click',function(){
 //   toogleSpinner(false);
