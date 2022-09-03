@@ -17,11 +17,11 @@
         <div class="container ">
             <nav class="navbar navbar-expand-lg bg-light mt-3 ">
                 <div class="container-fluid">
-                  <a class="navbar-brand fw-bolder" href="#"><span class="border rounded-1 p-2 mx-2 bg-primary text-white">Alpha</span>News</a>
+                  <a class="navbar-brand fw-bolder" href="#"><span class="border rounded-1 p-2 mx-2 bg-primary text-white">ALPHA</span>NEWS</a>
                   
                   <div>
-                    <a  class=" fw-bolder fs-4 text-decoration-none px-3"href="http://google.com" target="_blank" rel="noopener noreferrer">News</a>
-                    <a  class=" fw-bolder fs-4 text-decoration-none"href="http://google.com" target="_blank" rel="noopener noreferrer">Blog</a>
+                    <a  class=" fw-bolder fs-4 text-decoration-none px-3"href="http://google.com" target="_blank" rel="noopener noreferrer">NEWS</a>
+                    <a  class=" fw-bolder fs-4 text-decoration-none"href="http://google.com" target="_blank" rel="noopener noreferrer">BLOG</a>
                   </div>
                 </div>
               </nav>
@@ -36,7 +36,7 @@
       <section >
           <nav class=" navbar-expand-lg bg-light">
               <div>              
-                  <ul id="category-containerr" class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <ul onclick="toogleSpinner(true)" id="category-containerr" class="navbar-nav me-auto mb-2 mb-lg-0">
                   </ul>
               </div>
           </nav>
@@ -44,15 +44,18 @@
        </section>
        <!-- spinner  -->
        <section>
-         <div class="spinner-border text-info " role="status">
+        <div id="loader" style="height: 200px;" class="d-flex align-items-center justify-content-center d-none">
+             <div class="spinner-border text-info " role="status">
             <span class="visually-hidden border">Loading...</span>
           </div>
+        </div>
+      
        </section>
         <!-- all category type ends -->
 
         <section> 
            
-            <div id="news-container">
+            <div id="news-container" >
               
             </div>
         </section>

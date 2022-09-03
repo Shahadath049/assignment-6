@@ -2,9 +2,11 @@ const loadCategory = () =>{
     fetch('https://openapi.programming-hero.com/api/news/categories')
     .then(res => res.json())
     .then(data => displayCategory(data.data.news_category))
+   
 }
 
 const displayCategory = categories =>{
+  
     const categoryContainer = document.getElementById('category-containerr');
     categories.forEach(category => {
         const newlist = document.createElement('li');
@@ -14,6 +16,8 @@ const displayCategory = categories =>{
         `
         categoryContainer.appendChild(newlist);
     });
+    toogleSpinner(false); 
+    // spinner off 
     
 }
 // load news
@@ -24,7 +28,7 @@ const loadNews = (category_id) =>{
 }
 
 const displayNews = allnews =>{ 
-    
+  
     const newsContainer = document.getElementById('news-container');
     newsContainer.textContent= '';
    
@@ -64,6 +68,7 @@ const displayNews = allnews =>{
         `
         newsContainer.appendChild(newsData);
     })
+    toogleSpinner(false);
     
 }
 // modal functions
@@ -72,7 +77,9 @@ const newsDetails = news_id =>{
     .then(res => res.json())
     .then(data => displayNewsDetails(data.data[0]))
 }
-
+// document.getElementById('news-container').addEventListener('click',function(){
+//   toogleSpinner(false);
+// })
 const displayNewsDetails =  allDetails =>{
   console.log(allDetails);
   let modalTitle = document.getElementById('modal-title');
@@ -81,10 +88,19 @@ const displayNewsDetails =  allDetails =>{
       modalText.innerText= allDetails.details;
   let modalAuthor = document.getElementById('modal-author');
       modalAuthor.innerText= allDetails.author.name? allDetails.author.name:'No Data found';
-     
+  
+
       
 }
-
+const toogleSpinner = isLoading =>{
+  const loadSpinner = document.getElementById('loader')
+  if(isLoading){
+    loadSpinner.classList.remove('d-none');
+  }
+  else{
+    loadSpinner.classList.add('d-none');
+  }
+}
 
 loadCategory()
 
