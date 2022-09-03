@@ -1,0 +1,15 @@
+body{
+    font-family: 'Cabin', sans-serif;
+    background-color: #F6F6F6;
+}
+hr{
+    border: 1px solid;
+}
+#category-container{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    color:#858585;
+}
+.news-type{
+    text-align: center;
+}
