@@ -40,8 +40,22 @@ const displayNews = allnews =>{
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">${news.title}</h5>
-              <p class="card-text">${news.details.slice(0,120)}</p>
-              <p class="card-text"><small class="text-muted">${news.author.name? news.author.name:'No Data'}</small></p>
+              <p class="card-text">${news.details.slice(0,180)}</p>
+              
+              
+              <div class=" d-flex justify-content-between align-items-center" >
+              <div class="d-flex justify-content-between align-items-center" style="width:200px;">
+                <img src="${news.author.img}" class="img-responsive img-rounded m-5px" style="max-height: 45px; max-width: 45px; border:1px; border-radius:50%">
+                <div >
+                <p class="m-0 card-text"><small class="text-muted">${news.author.name? news.author.name:'Not Found'}</small></p>
+                <p class="card-text"><small class="text-muted">${news.author.published_date}</small></p>
+                </div>
+              </div>
+              <div>
+              <i class="fa-regular fa-eye"></i> ${news.total_view? news.total_view :'No Views'}
+              </div>
+
+              </div>
             
             </div>
           </div>

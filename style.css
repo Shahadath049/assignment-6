@@ -16,3 +16,6 @@ hr{
 .card{
     padding: 10px;
 }
+.card-text{
+    text-overflow: ellipsis;
+}
