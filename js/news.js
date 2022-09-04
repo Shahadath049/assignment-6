@@ -104,9 +104,7 @@ const newsDetails = news_id =>{
       throw(error);
   })
 }
-// document.getElementById('news-container').addEventListener('click',function(){
-//   toogleSpinner(false);
-// })
+
 const displayNewsDetails =  allDetails =>{
   console.log(allDetails);
   let modalTitle = document.getElementById('modal-title');
