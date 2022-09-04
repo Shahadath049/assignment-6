@@ -46,7 +46,7 @@ const displayNews = allnews =>{
     else{
       message.classList.add('d-none')
     }
-
+    //some message found
     const newMessage= document.getElementById('found');
     newMessage.innerText = allnews.length + ' '+ 'Items found in this category';
     if(allnews.length >0){
