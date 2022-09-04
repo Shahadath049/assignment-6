@@ -79,6 +79,58 @@
                 </p>
             </div>
         </section>
+        <section class="container mt-5">
+            <h2 class="text-info fw-bold">
+                <span>Question 3: </span> What are the differences between map (),forEach(), find (),filter() and  in JavaScript? ?
+            </h2>
+            <div class="p-6">
+                <p class="container fs-4">
+                    <span class="fs-3 text-warning fw-bold">Answer :</span> <br>
+                    We use arrays. A lot of arrays. We use arrays to show search lists, items added into a user cart, How many time you logged into your system right ?
+
+Javascript Array inbuilt object provides some really cool and helpful functions to manage our data stored in arrays. We are going to take a look on this methods really quick.<br>
+                     <span class="text-info fw-bold">Foreach</span> <br>
+                     Foreach takes a callback function and run that callback function on each element of array one by one.Basically forEach works as a traditional for loop looping over the array and providing you array elements to do operations on them. <br>
+                    <span class="text-info fw-bold">Filter</span> <br>
+                    The main difference between forEach and filter is that forEach just loop over the array and executes the callback but filter executes the callback and check its return value Also take notice filter does not update the existing array it will return a new filtered array every time.<br>
+                    <span class="text-info fw-bold">Map</span> <br>
+                    Map like filter & foreach takes a callback and run it against every element on the array but whats makes it unique is it generate a new array based on your existing array.Map ran through every element of the array, multiplied it to 10 and returned the element which will be going to store inside our resulting array. <br>
+                    <span class="text-info fw-bold">Find</span> <br>
+                    The find() method is a better option to use across modern browsers, but if you care about the IE browser, use the filter() method.
+
+                    The find() method is a better option to use across modern browsers, but if you care about the IE browser, use the filter() method. <br>
+                   
+                </p>
+            </div>
+        </section>
+        <section class="container mt-5">
+            <h2 class="text-info fw-bold">
+                <span>Question 4: </span> What are the differences between map (),forEach(), find (),filter() and  in JavaScript? ?
+            </h2>
+            <div class="p-6">
+                <p class="container fs-4">
+                    <span class="fs-3 text-warning fw-bold">Answer :</span> <br>
+                    Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements. Another great thing that comes with template strings are tags. Tags are functions that take a string and the decomposed parts of the string as parameters and are great for converting strings to different entities.<br>
+                     <span class="text-info fw-bold">Interpolating Variables and Expressions</span> <br>
+                     We insert a variable or expression by adding a dollar sign $ and curly braces {} into the string `${variable}`. This is much better than the alternative in old JavaScript where we had to concatenate a string.As we can see it’s easy to make syntax errors with the old concatenation syntax if we have complex variables and expressions. Therefore template strings are a great improvement from what we had before. <br>
+                    <span class="text-info fw-bold">Multiline Strings</span> <br>
+                    Another great feature of template strings is that we can have strings with multiple lines for better code readability. This cannot be done in an easy way with the old style of strings. With the old style of strings, we had to concatenate each line of the string to put long strings in multiple lines.As we can see, this will become really painful is we have many more lines. It’s very frustrating to have all those plus signs and divide the string into multiple lines.This is much better than concatenating strings together. It takes a lot less time to write the code and a lower probability of syntax errors. It’s also much more readable.<br>
+                    <span class="text-info fw-bold">Nesting Templates</span> <br>
+                    Template strings can be nested in each other. This is a great feature because many people want to create dynamic strings. Template strings allow us to nest regular strings or template strings within template strings.<br>
+                    <span class="text-info fw-bold">Tagged Templates</span> <br>
+                    With template strings, we can add something called tags in front of a template string. They are functions that take a string and the decomposed parts of the string as parameters. A tagged function decomposes the template string into an array as the first parameter, with each item of the array as the constant parts of the string. The additional parameters of the function are all the variables and expressions in the order in which they appear in the string.Tagged templates are great for converting strings to anything you want since it’s just a regular function. However, it is a special function because the first parameter is an array containing the constant parts of the string. The rest of the parameters contain the returned values that each expression returns. This is great for manipulating the string and transforming the returned values to what we want.
+
+                    The return value of tags can be anything you want. So we can return strings, arrays, objects, or anything else.<br>
+                    <span class="text-info fw-bold">Raw Strings</span> <br>
+                    Template strings have a special raw property that you can get from tags. The raw property gets us the string without escaping the special characters, hence the property is called raw. To access the raw property of a string,<br>
+                    <span class="text-info fw-bold">Support for Template Strings</span> <br>
+                    Template strings are supported by almost all browsers that are regularly maintained today. The only major one that doesn’t support it right out of the box is Internet Explorer. However, browsers that do not support it can add it with Babel. Node.js also supports it in version 4 or later.
+
+Template strings are the new standard for JavaScript strings. It is much better than strings before ES6 in that it supports interpolating expressions inside strings. We also have tagged templates which are just functions, with the decomposed parts of the template string as parameters. The constant string in the first parameter is the string in a decomposed array form, and the evaluated versions of the expressions in the order they appeared in the string are the remaining arguments. Tagged template functions can return any variable type.<br>
+                   
+                </p>
+            </div>
+        </section>
     </main>
     
     
